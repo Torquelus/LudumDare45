@@ -10,8 +10,12 @@ public class MeshGenerator : MonoBehaviour
 	Vector3[] vertices;
 	int[] triangles;
 
-	public int xSize = 20;
-	public int zSize = 20;
+	public int xSize = 10;
+	public int zSize = 10;
+	public float noiseY = 1.0f;
+	public float noiseX = 0.3f;
+	public float noiseZ = 0.3f;
+	public int multiplier = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -25,17 +29,17 @@ public class MeshGenerator : MonoBehaviour
 	void CreateShape() {
 		vertices = new Vector3[(xSize + 1) * (zSize + 1)];
 
-		for (int i = 0, z = 0; z <= zSize; z++) {
-			for (int x = 0; x <= xSize; x++) {
-				float y = Mathf.PerlinNoise(x * 0.3f, z * 0.3f) * 2.0f;
-				vertices[i] = new Vector3(x, y, z);
+		for (int i = 0, z = -zSize/2; z <= zSize/2; z++) {
+			for (int x = -xSize/2; x <= xSize/2; x++) {
+				float y = Mathf.PerlinNoise(x * noiseX, z * noiseZ) * noiseY;
+				vertices[i] = new Vector3(x * multiplier, y * multiplier, z * multiplier);
 				i++;
 			}
 		}
 		triangles = new int[xSize * zSize * 6];
 
-		for (int vert = 0, tries = 0,  z = 0; z < zSize; z++) { 
-			for (int x = 0; x < xSize; x++) {
+		for (int vert = 0, tries = 0,  z = -zSize/2; z < zSize/2; z++) { 
+			for (int x = -xSize/2; x < xSize/2; x++) {
 				triangles[0 + tries] = vert + 0;
 				triangles[1 + tries] = vert + xSize + 1;
 				triangles[2 + tries] = vert + 1;

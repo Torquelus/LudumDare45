@@ -10,7 +10,7 @@ public class MapGeneration : MonoBehaviour {
 			int biomeImg = Random.Range(0, Biomes.Length);
 			int randX = Random.Range(-20, 20);
 			int randZ = Random.Range(-20, 20);
-			Vector3 newPos = new Vector3(transform.position.x + (randX * 100), transform.position.y, transform.position.z + (randZ * 100));
+			Vector3 newPos = new Vector3(transform.position.x + (randX * 20), transform.position.y, transform.position.z + (randZ * 20));
 			Instantiate(Biomes[biomeImg], newPos, Quaternion.identity);
 		}
 	}
