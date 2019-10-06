@@ -12,9 +12,9 @@ public class BoulderSpawn : MonoBehaviour
 
     [Header("Biome Range X(min, max) Z(min, max)")]
 	public int minBiomeRangeX = 10;
-    public int maxBiomeRangeX = 20;
+    public int maxBiomeRangeX = 40;
     public int minBiomeRangeZ = 10;
-    public int maxBiomeRangeZ = 20;
+    public int maxBiomeRangeZ = 40;
 
     [Header("Max Object Scale")]
 	public int maxScale;
