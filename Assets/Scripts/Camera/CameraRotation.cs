@@ -31,10 +31,11 @@ public class CameraRotation : MonoBehaviour
         }
         else
         {
-            var freeLook = GetComponent<CinemachineFreeLook>();
+            var freeLook = GetComponent<CinemachineFreeLook>(); //clears inputs
             freeLook.m_XAxis.m_InputAxisName = "";  
             freeLook.m_YAxis.m_InputAxisName = "";
-
+           
+            //forces position to stay the same
             freeLook.m_XAxis.Value = Xrotation;
             freeLook.m_YAxis.Value = Yrotation;
 
