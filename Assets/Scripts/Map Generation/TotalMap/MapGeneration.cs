@@ -15,8 +15,8 @@ public class MapGeneration : MonoBehaviour {
     public int maxGrassObjects = 200;
 
     [Header("Number of Biomes")]
-    public int minBiomeRange = 50;
-    public int maxBiomeRange = 70;
+    public int minBiomeRange = 100;
+    public int maxBiomeRange = 110;
 
     [Header("Spawn Area (Width, Length)")]
     public int spawnAreaWidth = 500;

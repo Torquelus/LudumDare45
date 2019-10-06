@@ -438,7 +438,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308186918}
-  m_LocalRotation: {x: 0.000000008486467, y: 2.6531984e-15, z: -1, w: -0.00000021977235}
+  m_LocalRotation: {x: -0.0000000084878735, y: -2.662274e-15, z: -1, w: -0.0000002546297}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -781,7 +781,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898460997}
-  m_LocalRotation: {x: 0.036325037, y: 0.000000002242654, z: -0.000000019448432, w: -0.99934006}
+  m_LocalRotation: {x: 0.036325037, y: 0.0000000022514905, z: -0.000000027565337,
+    w: -0.99934006}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -924,6 +925,9 @@ GameObject:
   m_Component:
   - component: {fileID: 930340542}
   - component: {fileID: 930340541}
+  - component: {fileID: 930340545}
+  - component: {fileID: 930340544}
+  - component: {fileID: 930340543}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -955,8 +959,8 @@ MonoBehaviour:
   grassParent: {fileID: 1653906063}
   minGrassObjects: 100
   maxGrassObjects: 200
-  minBiomeRange: 50
-  maxBiomeRange: 70
+  minBiomeRange: 100
+  maxBiomeRange: 110
   spawnAreaWidth: 500
   spawnAreaLength: 500
 --- !u!4 &930340542
@@ -973,6 +977,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &930340543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930340540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351bcb18ae32a1e47876f6f06cb84162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &930340544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930340540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73029a909a6ffa4c8d6cf887ea46042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &930340545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930340540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e3e5c9cc608ea4194a349338ea05fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RecipeList:
+  - recipeName: Yes
+    amtWood: 1
+    amtStone: 1
+    amtTwig: 1
+    amtHay: 1
+    amtGrass: 1
+  - recipeName: no
+    amtWood: 9
+    amtStone: 8
+    amtTwig: 6
+    amtHay: 7
+    amtGrass: 0
 --- !u!1 &1121182378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,7 +1106,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121182378}
-  m_LocalRotation: {x: 0.5646033, y: -0.000000013577377, z: 0.000000009287837, w: 0.82536244}
+  m_LocalRotation: {x: 0.5646033, y: 0.000000013577142, z: -0.000000009287677, w: 0.82536244}
   m_LocalPosition: {x: 0, y: 54.5, z: -1.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1583,7 +1636,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827529088}
-  m_LocalRotation: {x: 0.000000009094819, y: -0.018189551, z: 0.9998346, w: -0.0000000563413}
+  m_LocalRotation: {x: 0.000000017757989, y: -0.018189551, z: 0.9998346, w: -0.000000042013422}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1639,7 +1692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2049791156
 MonoBehaviour:
   m_ObjectHideFlags: 0

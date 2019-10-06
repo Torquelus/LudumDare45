@@ -1,0 +1,20 @@
+{
+	"RecipeList": 
+	[
+		{
+			"recipeName": "hello",
+			"amtWood": 1,
+			"amtStone": 1,
+			"amtTwig": 1,
+			"amtHay": 1,
+			"amtGrass": 1
+		},
+		{
+			"recipeName": "no",
+			"amtWood": 9,
+			"amtStone": 8,
+			"amtTwig": 6,
+			"amtHay": 7,
+			"amtGrass": 0
+		}
+	]}
