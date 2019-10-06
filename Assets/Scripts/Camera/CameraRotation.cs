@@ -16,7 +16,7 @@ public class CameraRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(1)) {  //0 = left click, 1 = right click, 2 is middle
+        if (Input.GetMouseButton(2)) {  //0 = left click, 1 = right click, 2 is middle
             //true if right mouse button is being held
 
             //gets
