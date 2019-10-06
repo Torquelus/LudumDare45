@@ -43,6 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bdf0b7a442549b4e9581a27a6becc7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boulders:
-  - {fileID: 6458576982938837648, guid: 4c75beb43d6f4364f924bd8723e94555, type: 3}
-  - {fileID: 1966226093718676678, guid: e27faf6f7083b234da78cb252d4ba80e, type: 3}
+  Boulder:
+  - {fileID: -927199367670048503, guid: d8dfe18755332174296c5d7a66dbec61, type: 3}
+  - {fileID: -927199367670048503, guid: 33e19677df65f454ea9ba63dbed2e8bc, type: 3}
+  - {fileID: -927199367670048503, guid: eb08e4cc705dc4949a925657fa36b167, type: 3}
+  bouldRange: 64000000c8000000
+  biomeRange: 0a000000280000000a00000028000000

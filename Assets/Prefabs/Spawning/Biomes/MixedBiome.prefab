@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3250484603699746822
+--- !u!1 &7882992668148346139
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3250484603699746820}
-  - component: {fileID: 3250484603699746823}
+  - component: {fileID: 4103066092304887468}
+  - component: {fileID: 7265338646247262197}
   m_Layer: 0
   m_Name: MixedBiome
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3250484603699746820
+--- !u!4 &4103066092304887468
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3250484603699746822}
+  m_GameObject: {fileID: 7882992668148346139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3250484603699746823
+--- !u!114 &7265338646247262197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3250484603699746822}
+  m_GameObject: {fileID: 7882992668148346139}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 874b1af04912abe4e9c82b28b43e5ba6, type: 3}
@@ -53,3 +53,5 @@ MonoBehaviour:
   - {fileID: 6890315798088628861, guid: 3e425f08e7d64ab4097b0c9462abfd0d, type: 3}
   - {fileID: 8042537062801089927, guid: 7413c43731304fd4fb32bc1044475488, type: 3}
   - {fileID: 1966226093718676678, guid: e27faf6f7083b234da78cb252d4ba80e, type: 3}
+  mixedRange: 64000000c8000000
+  biomeRange: 0a000000280000000a00000028000000
