@@ -41,7 +41,7 @@ public class BoulderSpawn : MonoBehaviour
 			// Random Scale Factor
 			int scaleFactor = Random.Range(1, maxScale);
 
-			// Create the Position, Rotation and Scale of new object 
+			// Create the Position, Rotation and Scale of new object
 			Vector3 newPos = new Vector3(transform.position.x + (randX), 100, transform.position.z + (randZ));
 			Quaternion randRotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
 			Vector3 randScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
