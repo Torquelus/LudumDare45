@@ -8,14 +8,15 @@ public class MapGeneration : MonoBehaviour {
 		int randBiome = Random.Range(10, 20);
 		for (int i = 0; i <= randBiome; i++) {
 			int biomeImg = Random.Range(0, Biomes.Length);
-			int randX = Random.Range(-20, 20);
-			int randZ = Random.Range(-20, 20);
-			Vector3 newPos = new Vector3(transform.position.x + (randX * 20), 100, transform.position.z + (randZ * 20));
+			int randX = Random.Range(-500, 500);
+			int randZ = Random.Range(-500, 500);
+			Vector3 newPos = new Vector3(randX, 100, randZ);
 			RaycastHit hit;
-			Debug.Log(Physics.Raycast(newPos, Vector3.down, out hit));
-			Instantiate(Biomes[biomeImg], newPos, Quaternion.identity);
-			RaycastHit hit2;
-			Debug.Log(Physics.Raycast(newPos, Vector3.down, out hit2));
+			if (Physics.Raycast(newPos, Vector3.down, out hit)) {
+				Vector3 finalPos = hit.point;
+				Instantiate(Biomes[biomeImg], finalPos, Quaternion.identity);
+			}
 		}
 	}
+
 }

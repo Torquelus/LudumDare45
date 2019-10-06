@@ -2,23 +2,44 @@
 
 public class BoulderSpawn : MonoBehaviour
 {
-	public GameObject[] Boulders;
+	[Header("Objects In Boulder Area")]
+	public GameObject[] Boulder;
+
+	[Header("Number of Biome Objects")]
+	public int[] bouldRange;
+
+	[Header("Biome Range X(min, max) Z(min, max)")]
+	public int[] biomeRange;
+
 	// Start is called before the first frame update
 	void Start() {
-		int randBould = Random.Range(5, 15);
+
+		// Number of Trees and Twigs in forest
+		int randBould = Random.Range(bouldRange[0], bouldRange[1]);
+
+		// Random size of Biome from spawn point
+		int randWid = Random.Range(biomeRange[0], biomeRange[1]);
+		int randLen = Random.Range(biomeRange[2], biomeRange[3]);
+
+		// Draw All Images
 		for (int i = 0; i <= randBould; i++) {
-			int bouldImg = Random.Range(0, Boulders.Length);
-			int randX = Random.Range(-11, 11);
-			int randZ = Random.Range(-11, 11);
-			
-			Vector3 newPos = new Vector3(transform.position.x + (randX * 10), 100, transform.position.z + (randZ * 10));
 
+			// Choose Model to put into scene (e.g. Boulders, Stones)
+			int bouldImg = Random.Range(0, Boulder.Length);
+
+			// Random Position in range
+			int randX = Random.Range(-randWid, randWid);
+			int randZ = Random.Range(-randLen, randLen);
+
+			// Create the Position of new object 
+			Vector3 newPos = new Vector3(transform.position.x + (randX), 100, transform.position.z + (randZ));
+
+			// Find Ground - if Ground exists instantiate on ground
 			RaycastHit hit;
-			if (Physics.Raycast(transform.position, Vector3.down, out hit)){
+			if (Physics.Raycast(newPos, Vector3.down, out hit)) {
 				Vector3 finalPos = hit.point;
-				Instantiate(Boulders[bouldImg], finalPos, Quaternion.identity);
+				Instantiate(Boulder[bouldImg], finalPos, Quaternion.identity);
 			}
-
 		}
 	}
 }

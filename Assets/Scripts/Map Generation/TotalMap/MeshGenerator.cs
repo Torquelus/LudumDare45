@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
 public class MeshGenerator : MonoBehaviour
 {
 	Mesh mesh;
+	MeshCollider meshCol;
 
 	Vector3[] vertices;
 	int[] triangles;
@@ -22,10 +21,11 @@ public class MeshGenerator : MonoBehaviour
     {
 		mesh = new Mesh();
 		GetComponent<MeshFilter>().mesh = mesh;
-		GetComponent<MeshCollider>().sharedMesh = mesh;
 		CreateShape();
 		UpdateMesh();
-    }
+
+		GetComponent<MeshCollider>().sharedMesh = mesh;
+	}
 
 	void CreateShape() {
 		vertices = new Vector3[(xSize + 1) * (zSize + 1)];
