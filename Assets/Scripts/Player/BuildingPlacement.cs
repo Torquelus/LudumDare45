@@ -14,8 +14,14 @@ public class BuildingPlacement : MonoBehaviour{
     // Parent for building gameobject
     public Transform parent;
 
-    // Building material
-    Renderer buildingMaterial;
+    // Rotation speed
+    public float rotationSpeed = 100f;
+
+    // Building renderers
+    Renderer[] buildingRenderers;
+
+    // Original Building Materials
+    Material[] originalMaterials;
 
     // Mouse Position
     Vector3 mousePos;
@@ -23,6 +29,9 @@ public class BuildingPlacement : MonoBehaviour{
 
     // Currently attached gameobject
     GameObject selectedBuilding;
+
+    // Rotator of gameobject
+    Transform rotator;
 
     // Building script
     Building selectedBuildingScript;
@@ -36,7 +45,7 @@ public class BuildingPlacement : MonoBehaviour{
     // Update is called once per frame
     void Update(){
         // On click
-        if (Input.GetMouseButton(0) && !selected) {
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !selected) {
             SpawnBuilding();
         }
 
@@ -54,17 +63,63 @@ public class BuildingPlacement : MonoBehaviour{
                 InvalidSelection();
                 canPlace = false;
             }
+
+            // If click
+            if (Input.GetMouseButton(0)) {
+                PlaceBuilding();
+            }
+            if (Input.GetMouseButton(1)) {
+                CancelBuilding();
+            }
+            if (Input.GetKey(KeyCode.E)) {
+                RotateRight();
+            }
+            if (Input.GetKey(KeyCode.Q)) {
+                RotateLeft();
+            }
         }
+    }
+
+    // Rotate Right
+    void RotateRight() {
+        rotator.RotateAround(rotator.position, rotator.up, Time.deltaTime * rotationSpeed);
+    }
+
+    // Rotate Left
+    void RotateLeft() {
+        rotator.RotateAround(rotator.position, rotator.up, -Time.deltaTime * rotationSpeed);
+    }
+
+    // Cancel building
+    void CancelBuilding() {
+        selected = false;
+        Destroy(selectedBuilding);
+        selectedBuilding = null;
     }
 
     // Toggle Validity
     void ValidSelection() {
-        buildingMaterial.material = validMaterial;
+        foreach (Renderer renderer in buildingRenderers) {
+            renderer.material = validMaterial;
+        }
         Debug.Log("Valid!");
     }
     void InvalidSelection() {
-        buildingMaterial.material = invalidMaterial;
+        foreach (Renderer renderer in buildingRenderers) {
+            renderer.material = invalidMaterial;
+        }
         Debug.Log("Invalid!");
+    }
+
+    // Place Building
+    void PlaceBuilding() {
+        if (canPlace && selected) {
+            selected = false;
+            for (int i = 0; i < buildingRenderers.Length; i++) {
+                buildingRenderers[i].material = originalMaterials[i];
+            }
+            selectedBuilding = null;
+        }
     }
 
     // Update Mouse Position
@@ -91,11 +146,32 @@ public class BuildingPlacement : MonoBehaviour{
 
     // Spawn Building
     void SpawnBuilding() {
+        // Update Mouse Pos
         UpdateMousePosition();
+
+        // Instantiate building
         selectedBuilding = Instantiate(building, mousePos, Quaternion.FromToRotation(Vector3.up, normal), parent);
-        buildingMaterial = selectedBuilding.transform.Find("Model").GetComponent<MeshRenderer>();
-        buildingMaterial.material = invalidMaterial;
-        selectedBuildingScript = selectedBuilding.GetComponent<Building>();
+
+        // Get rotator
+        rotator = selectedBuilding.transform.Find("Rotator").transform;
+
+        // Get all renderers
+        buildingRenderers = selectedBuilding.GetComponentsInChildren<Renderer>();
+
+        // Make new array
+        originalMaterials = new Material[buildingRenderers.Length];
+
+        // Get all materials
+        for (int i = 0; i < buildingRenderers.Length; i++) {
+            originalMaterials[i] = buildingRenderers[i].material;
+        }
+
+        foreach (Renderer renderer in buildingRenderers) {
+            renderer.material = validMaterial;
+        }
+
+        // Set flags
+        selectedBuildingScript = selectedBuilding.GetComponentInChildren<Building>();
         selected = true;
         canPlace = selectedBuildingScript.canPlace;
     }
