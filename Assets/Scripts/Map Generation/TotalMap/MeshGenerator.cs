@@ -18,6 +18,14 @@ public class MeshGenerator : MonoBehaviour
 	[Header("Multipler - Polygon Changer")]
 	public int multiplier = 100;
 
+	[Header("Change Noise Range")]
+	public float minNoiseX = 0.3f;
+	public float maxNoiseX = 1.0f;
+	public float minNoiseY = 0.5f;
+	public float maxNoiseY = 1.5f;
+	public float maxNoiseZ = 0.3f;
+	public float minNoiseZ = 1.0f;
+
 	// Start is called before the first frame update
 	void Awake()
     {
@@ -39,9 +47,9 @@ public class MeshGenerator : MonoBehaviour
 		// Create Vector equaling size of Mesh
 		vertices = new Vector3[(xSize + 1) * (zSize + 1)];
 
-		float noiseY = Random.Range(0.5f, 1.5f);
-		float noiseX = Random.Range(0.3f, 1.0f);
-		float noiseZ = Random.Range(0.3f, 1.0f);
+		float noiseY = Random.Range(minNoiseY,maxNoiseY);
+		float noiseX = Random.Range(minNoiseX, maxNoiseX);
+		float noiseZ = Random.Range(minNoiseZ, maxNoiseZ);
 
 		// Loop through and instantiate all vertices
 		for (int i = 0, z = -zSize/2; z <= zSize/2; z++) {
