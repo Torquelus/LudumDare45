@@ -4,8 +4,9 @@ public class MixedSpawn : MonoBehaviour
 {
 	[Header("Objects In Mixed Biome")]
 	public GameObject[] Mixed;
+    Transform parent;
 
-	[Header("Number of Biome Objects")]
+    [Header("Number of Biome Objects")]
     public int minObjects = 100;
     public int maxObjects = 200;
 
@@ -20,6 +21,9 @@ public class MixedSpawn : MonoBehaviour
 
 	// Start is called before the first frame update
 	void Start() {
+
+        // Initialise parent
+        parent = GameObject.Find("WorldObjects").transform;
 
 		// Number of objects in mixed Biome
 		int randMixed = Random.Range(minObjects, maxObjects);
@@ -47,10 +51,9 @@ public class MixedSpawn : MonoBehaviour
 			Vector3 randScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
 
 			// Find Ground - if Ground exists instantiate on ground
-			
 			if (Physics.Raycast(newPos, Vector3.down, out RaycastHit hit)) {
 				Vector3 finalPos = hit.point;
-				GameObject a = Instantiate(Mixed[mixedImg], finalPos, randRotation);
+				GameObject a = Instantiate(Mixed[mixedImg], finalPos, randRotation, parent);
 				a.transform.localScale = randScale;
 			}
 		}

@@ -4,8 +4,9 @@ public class ForestsSpawn : MonoBehaviour
 {
 	[Header("Objects In Forests")]
 	public GameObject[] Forests;
+    Transform parent;
 
-	[Header("Number of Biome Objects")]
+    [Header("Number of Biome Objects")]
 	public int minObjects = 100;
     public int maxObjects = 200;
 
@@ -20,9 +21,11 @@ public class ForestsSpawn : MonoBehaviour
 
 	// Start is called before the first frame update
 	void Start() {
+        // Initialise parent
+        parent = GameObject.Find("WorldObjects").transform;
 
-		// Number of Trees and Twigs in forest
-		int randForest = Random.Range(minObjects, maxObjects);
+        // Number of Trees and Twigs in forest
+        int randForest = Random.Range(minObjects, maxObjects);
 
 		// Random size of Biome from spawn point
 		int randWid = Random.Range(minBiomeRangeX, maxBiomeRangeX);
@@ -49,7 +52,7 @@ public class ForestsSpawn : MonoBehaviour
 			// Find Ground - if Ground exists instantiate on ground
 			if (Physics.Raycast(newPos, Vector3.down, out RaycastHit hit)) {
 				Vector3 finalPos = hit.point;
-				GameObject a = Instantiate(Forests[forestImg], finalPos, randRotation);
+				GameObject a = Instantiate(Forests[forestImg], finalPos, randRotation, parent);
 				a.transform.localScale = randScale;
 			}
 		}

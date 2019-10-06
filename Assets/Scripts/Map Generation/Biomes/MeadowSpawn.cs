@@ -4,8 +4,9 @@ public class MeadowSpawn : MonoBehaviour
 {
 	[Header("Objects In Meadow")]
 	public GameObject[] Meadow;
+    Transform parent;
 
-	[Header("Number of Biome Objects")]
+    [Header("Number of Biome Objects")]
     public int minObjects = 100;
     public int maxObjects = 200;
 
@@ -20,9 +21,11 @@ public class MeadowSpawn : MonoBehaviour
 
 	// Start is called before the first frame update
 	void Start() {
+        // Initialise parent
+        parent = GameObject.Find("WorldObjects").transform;
 
-		// Number of objects in meadow
-		int randMeadow = Random.Range(minObjects, maxObjects);
+        // Number of objects in meadow
+        int randMeadow = Random.Range(minObjects, maxObjects);
 
 		// Random size of Biome from spawn point
 		int randWid = Random.Range(minBiomeRangeX, maxBiomeRangeX);
@@ -49,7 +52,7 @@ public class MeadowSpawn : MonoBehaviour
 			// Find Ground - if Ground exists instantiate on ground
 			if (Physics.Raycast(newPos, Vector3.down, out RaycastHit hit)) {
 				Vector3 finalPos = hit.point;
-				GameObject a = Instantiate(Meadow[meadowImg], finalPos, randRotation);
+				GameObject a = Instantiate(Meadow[meadowImg], finalPos, randRotation, parent);
 				a.transform.localScale = randScale;
 			}
 		}

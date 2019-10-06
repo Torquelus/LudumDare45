@@ -4,6 +4,7 @@ public class BoulderSpawn : MonoBehaviour
 {
 	[Header("Objects In Boulder Area")]
 	public GameObject[] Boulder;
+    Transform parent;
 
 	[Header("Number of Biome Objects")]
 	public int minObjects = 100;
@@ -20,9 +21,11 @@ public class BoulderSpawn : MonoBehaviour
 
 	// Start is called before the first frame update
 	void Start() {
+        // Initialise parent
+        parent = GameObject.Find("WorldObjects").transform;
 
-		// Number of Trees and Twigs in forest
-		int randBould = Random.Range(minObjects, maxObjects);
+        // Number of Trees and Twigs in forest
+        int randBould = Random.Range(minObjects, maxObjects);
 
 		// Random size of Biome from spawn point
 		int randWid = Random.Range(minBiomeRangeX, maxBiomeRangeX);
@@ -49,7 +52,7 @@ public class BoulderSpawn : MonoBehaviour
 			// Find Ground - if Ground exists instantiate on ground
 			if (Physics.Raycast(newPos, Vector3.down, out RaycastHit hit)) {
 				Vector3 finalPos = hit.point;
-				GameObject a = Instantiate(Boulder[bouldImg], finalPos, randRotation);
+				GameObject a = Instantiate(Boulder[bouldImg], finalPos, randRotation, parent);
 				a.transform.localScale = randScale;
 			}
 		}
