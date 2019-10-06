@@ -17,6 +17,10 @@ public class CharacterMain : MonoBehaviour {
 		charaStat.name = newName;
 	}
 
+	public void SetModel() {
+
+	}
+
 	public void IncStats(int stat, int amt) {
 		switch (stat) {
 			// Energy

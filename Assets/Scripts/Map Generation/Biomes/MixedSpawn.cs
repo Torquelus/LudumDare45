@@ -55,7 +55,12 @@ public class MixedSpawn : MonoBehaviour
 			// Create the Position, Rotation and Scale of new object 
 			Vector3 newPos = new Vector3((transform.position.x + inCircle[0] * randXMult), 100, (transform.position.z + inCircle[1] * randZMult));
 			Quaternion randRotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-			Vector3 randScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+			if (Mixed[mixedImg].tag == "Grave") {
+				Vector3 randScale = new Vector3(1, 1, 1);
+			}
+			else {
+				Vector3 randScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+			}
 
 			// Find Ground - if Ground exists instantiate on ground
 			if (Physics.Raycast(newPos, Vector3.down, out RaycastHit hit) && hit.transform.tag == "Ground") {
