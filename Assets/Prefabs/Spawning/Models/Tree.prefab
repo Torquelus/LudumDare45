@@ -57,6 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4237062183346204399}
   - component: {fileID: 5297964768032683342}
+  - component: {fileID: 7349695292721576147}
   m_Layer: 0
   m_Name: SpawnTrigger
   m_TagString: Untagged
@@ -92,6 +93,18 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.39, z: 0}
+--- !u!114 &7349695292721576147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8259780888253982216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fde4234db995de4d9c83f165b96a6fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7024589676526245380
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -50,7 +50,7 @@ public class BoulderSpawn : MonoBehaviour
 			Vector3 randScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
 
 			// Find Ground - if Ground exists instantiate on ground
-			if (Physics.Raycast(newPos, Vector3.down, out RaycastHit hit)) {
+			if (Physics.Raycast(newPos, Vector3.down, out RaycastHit hit) && hit.transform.tag == "Ground") {
 				Vector3 finalPos = hit.point;
 				GameObject a = Instantiate(Boulder[bouldImg], finalPos, randRotation, parent);
 				a.transform.localScale = randScale;

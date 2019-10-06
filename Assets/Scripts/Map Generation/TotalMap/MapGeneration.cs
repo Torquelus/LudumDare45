@@ -48,7 +48,6 @@ public class MapGeneration : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.Raycast(newPos, Vector3.down, out hit)) {
 				Vector3 finalPos = hit.point;
-                Debug.Log(biomeImg);
 				Instantiate(Biomes[biomeImg], finalPos, Quaternion.identity, biomeParent);
 			}
 		}
@@ -69,8 +68,7 @@ public class MapGeneration : MonoBehaviour {
 			Vector3 newPos = new Vector3(randX, 100, randZ);
 
 			// Find Ground - if Ground exists instantiate on ground
-			RaycastHit hit;
-			if (Physics.Raycast(newPos, Vector3.down, out hit)) {
+			if (Physics.Raycast(newPos, Vector3.down, out RaycastHit hit) && hit.transform.tag == "Ground") {
 				Vector3 finalPos = hit.point;
 				Instantiate(grassImg, finalPos, Quaternion.identity, grassParent);
 			}

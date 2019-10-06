@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3283277197182662923}
   - component: {fileID: 6060595000998911203}
+  - component: {fileID: 5793649492545140639}
   m_Layer: 0
   m_Name: SpawnTrigger
   m_TagString: Untagged
@@ -44,6 +45,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0.19, y: 0.33, z: 0}
+--- !u!114 &5793649492545140639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335986253986140259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fde4234db995de4d9c83f165b96a6fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1966226093718676678
 GameObject:
   m_ObjectHideFlags: 0

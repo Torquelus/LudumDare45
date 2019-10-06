@@ -46,6 +46,10 @@ MonoBehaviour:
   Boulder:
   - {fileID: 1966226093718676678, guid: e27faf6f7083b234da78cb252d4ba80e, type: 3}
   - {fileID: 6458576982938837648, guid: 4c75beb43d6f4364f924bd8723e94555, type: 3}
-  bouldRange: 64000000c8000000
-  biomeRange: 0a000000140000000a00000014000000
+  minObjects: 100
+  maxObjects: 200
+  minBiomeRangeX: 10
+  maxBiomeRangeX: 40
+  minBiomeRangeZ: 10
+  maxBiomeRangeZ: 40
   maxScale: 5

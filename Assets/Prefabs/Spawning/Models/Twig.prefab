@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4958074574163345099}
   - component: {fileID: 8107288315642473718}
+  - component: {fileID: 5537388244726586919}
   m_Layer: 0
   m_Name: SpawnTrigger
   m_TagString: Untagged
@@ -76,6 +77,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5537388244726586919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8530301602699952784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fde4234db995de4d9c83f165b96a6fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7050947549659183883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83,11 +96,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2129008159821402693}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 9f39711fa578630439a43ea61689441b,
-        type: 3}
-      propertyPath: m_Name
-      value: Twig1
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9f39711fa578630439a43ea61689441b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -142,6 +150,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 238.299
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9f39711fa578630439a43ea61689441b,
+        type: 3}
+      propertyPath: m_Name
+      value: Twig1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f39711fa578630439a43ea61689441b, type: 3}
