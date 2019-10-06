@@ -2,12 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.LWRP;
+using TMPro;
+using UnityEngine.Rendering;
 
 public class UIManager : MonoBehaviour{
 
     // Menus
     public GameObject mainMenu;
     public GameObject optionsMenu;
+
+    // Graphics Qualities
+    public LightweightRenderPipelineAsset lowQuality;
+    public LightweightRenderPipelineAsset mediumQuality;
+    public LightweightRenderPipelineAsset highQuality;
+
+    // Quality Picker Dropdown
+    public TMP_Dropdown dropdown;
 
     // Awake function
     private void Awake() {
@@ -23,6 +34,27 @@ public class UIManager : MonoBehaviour{
     public void GoToOptionsMenu() {
         mainMenu.SetActive(false);
         optionsMenu.SetActive(true);
+    }
+
+    // Set graphics quality
+    public void SetGraphics() {
+        LightweightRenderPipelineAsset chosenQuality;
+        chosenQuality = null;
+        Debug.Log(dropdown.value);
+
+        switch (dropdown.value) {
+            case 0:
+                chosenQuality = lowQuality;
+                break;
+            case 1:
+                chosenQuality = mediumQuality;
+                break;
+            case 2:
+                chosenQuality = highQuality;
+                break;
+        }
+
+        GraphicsSettings.renderPipelineAsset = chosenQuality;
     }
 
     // Go back to main menu
