@@ -55,3 +55,4 @@ MonoBehaviour:
   - {fileID: 1966226093718676678, guid: e27faf6f7083b234da78cb252d4ba80e, type: 3}
   mixedRange: 64000000c8000000
   biomeRange: 0a000000280000000a00000028000000
+  maxScale: 5

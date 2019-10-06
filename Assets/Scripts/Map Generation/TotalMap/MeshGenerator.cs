@@ -1,16 +1,21 @@
 ﻿using UnityEngine;
 
+// Must Have Mesh
 [RequireComponent(typeof(MeshFilter))]
 public class MeshGenerator : MonoBehaviour
 {
+	// This Mesh
 	Mesh mesh;
-	MeshCollider meshCol;
 
+	// Vertices and triangles that make up mesh
 	Vector3[] vertices;
 	int[] triangles;
 
+	[Header("Length and Width of Terrain")]
 	public int xSize = 10;
 	public int zSize = 10;
+
+	[Header("Amount of Hill Noise")]
 	public float noiseY = 1.0f;
 	public float noiseX = 0.3f;
 	public float noiseZ = 0.3f;
@@ -19,17 +24,25 @@ public class MeshGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+		// Declare as mesh and instantiate Mesh Filter
 		mesh = new Mesh();
 		GetComponent<MeshFilter>().mesh = mesh;
+
+		// Create and Draw Mesh
 		CreateShape();
 		UpdateMesh();
 
+		// Add Collider
 		GetComponent<MeshCollider>().sharedMesh = mesh;
 	}
 
+	// Create the Mesh
 	void CreateShape() {
+
+		// Create Vector equaling size of Mesh
 		vertices = new Vector3[(xSize + 1) * (zSize + 1)];
 
+		// Loop through and instantiate all vertices
 		for (int i = 0, z = -zSize/2; z <= zSize/2; z++) {
 			for (int x = -xSize/2; x <= xSize/2; x++) {
 				float y = Mathf.PerlinNoise(x * noiseX, z * noiseZ) * noiseY;
@@ -37,8 +50,11 @@ public class MeshGenerator : MonoBehaviour
 				i++;
 			}
 		}
+
+		// Create Triangles equaling size of Mesh
 		triangles = new int[xSize * zSize * 6];
 
+		// Loop through and instantiate all triangles
 		for (int vert = 0, tries = 0,  z = -zSize/2; z < zSize/2; z++) { 
 			for (int x = -xSize/2; x < xSize/2; x++) {
 				triangles[0 + tries] = vert + 0;
@@ -54,11 +70,11 @@ public class MeshGenerator : MonoBehaviour
 		}
 	}
 
+	// Draw the Mesh
 	void UpdateMesh() {
-		mesh.Clear();
-		mesh.vertices = vertices;
-		mesh.triangles = triangles;
-
-		mesh.RecalculateNormals();
+		mesh.Clear();					// Clear Mesh
+		mesh.vertices = vertices;		// Draw Vertices
+		mesh.triangles = triangles;		// Draw Triangles
+		mesh.RecalculateNormals();		// Normalize Lighting
 	}
 }
