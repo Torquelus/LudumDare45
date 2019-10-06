@@ -7,7 +7,7 @@ public class MapGeneration : MonoBehaviour {
     public Transform biomeParent;
 
     [Header("Grass")]
-    public GameObject grassImg;
+    public GameObject[] Grass;
     public Transform grassParent;
 
     [Header("Number of Grass")]
@@ -60,6 +60,9 @@ public class MapGeneration : MonoBehaviour {
 		// Draw Biomes
 		for (int i = 0; i <= randGrass; i++) {
 
+			// Choose Biomes from list (e.g. Forest Biome, Mixed Biome, etc)
+			int grassImg = Random.Range(0, Grass.Length);
+
 			// Randomly Choose Point in spawn area
 			int randX = Random.Range(-spawnAreaWidth, spawnAreaWidth);
 			int randZ = Random.Range(-spawnAreaLength, spawnAreaLength);
@@ -70,7 +73,7 @@ public class MapGeneration : MonoBehaviour {
 			// Find Ground - if Ground exists instantiate on ground
 			if (Physics.Raycast(newPos, Vector3.down, out RaycastHit hit) && hit.transform.tag == "Ground") {
 				Vector3 finalPos = hit.point;
-				Instantiate(grassImg, finalPos, Quaternion.identity, grassParent);
+				Instantiate(Grass[grassImg], finalPos, Quaternion.identity, grassParent);
 			}
 		}
 	}
