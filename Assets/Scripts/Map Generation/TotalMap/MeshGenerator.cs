@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 // Must Have Mesh
 [RequireComponent(typeof(MeshFilter))]
 public class MeshGenerator : MonoBehaviour
 {
+    public NavMeshSurface surface; //for navmesh
+
 	// This Mesh
 	Mesh mesh;
 
@@ -34,6 +37,9 @@ public class MeshGenerator : MonoBehaviour
 
 		// Add Collider
 		GetComponent<MeshCollider>().sharedMesh = mesh;
+
+        // Add navMesh
+        surface.BuildNavMesh();
 	}
 
 	// Create the Mesh
