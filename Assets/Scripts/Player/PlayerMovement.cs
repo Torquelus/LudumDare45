@@ -8,8 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Camera cam;
     private NavMeshAgent agent;
     private bool selected = false;
-    public Material selectedcolor;
-    public Material deselectedcolor;
+    //public Material selectedcolor;
+    //public Material deselectedcolor;
 
     private void Start()
     {
@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (selected_unit.collider.transform == this.transform) {//selects unit of it was hit
                     selected = true;
-                    GetComponent<Renderer>().material = selectedcolor; ; //changes color
+//GetComponent<Renderer>().material = selectedcolor; ; //changes color
                     
 
                 }
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             selected = false;
 
 
-            GetComponent<Renderer>().material = deselectedcolor; ; //changes color
+            //GetComponent<Renderer>().material = deselectedcolor; ; //changes color
 
         }
 
