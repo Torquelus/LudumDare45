@@ -9,7 +9,10 @@ public class ForestsSpawn : MonoBehaviour
 	public int[] treeRange;
 
 	[Header("Biome Range X(min, max) Z(min, max)")]
-	public int[] biomeRange; 
+	public int[] biomeRange;
+
+	[Header("Max Object Scale")]
+	public int maxScale;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -31,14 +34,19 @@ public class ForestsSpawn : MonoBehaviour
 			int randX = Random.Range(-randWid, randWid);
 			int randZ = Random.Range(-randLen, randLen);
 
-			// Create the Position of new object 
+			// Random Scale Factor
+			int scaleFactor = Random.Range(1, maxScale);
+
+			// Create the Position, Rotation and Scale of new object 
 			Vector3 newPos = new Vector3(transform.position.x + (randX), 100, transform.position.z + (randZ));
+			Quaternion randRotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+			Vector3 randScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
 
 			// Find Ground - if Ground exists instantiate on ground
-			RaycastHit hit;
-			if (Physics.Raycast(newPos, Vector3.down, out hit)) {
+			if (Physics.Raycast(newPos, Vector3.down, out RaycastHit hit)) {
 				Vector3 finalPos = hit.point;
-				Instantiate(Forests[forestImg], finalPos, Quaternion.identity);
+				GameObject a = Instantiate(Forests[forestImg], finalPos, randRotation);
+				a.transform.localScale = randScale;
 			}
 		}
 	}

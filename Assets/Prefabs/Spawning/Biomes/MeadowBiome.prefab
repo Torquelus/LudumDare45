@@ -51,3 +51,4 @@ MonoBehaviour:
   - {fileID: 1523997680547205863, guid: f6b8c6bcfa8c60f43b849cf033d9e115, type: 3}
   meadowRange: 64000000c8000000
   biomeRange: 0a000000280000000a00000028000000
+  maxScale: 5
