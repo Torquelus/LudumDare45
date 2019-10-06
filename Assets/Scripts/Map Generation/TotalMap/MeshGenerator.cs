@@ -15,14 +15,11 @@ public class MeshGenerator : MonoBehaviour
 	public int xSize = 10;
 	public int zSize = 10;
 
-	[Header("Amount of Hill Noise")]
-	public float noiseY = 1.0f;
-	public float noiseX = 0.3f;
-	public float noiseZ = 0.3f;
+	[Header("Multipler - Polygon Changer")]
 	public int multiplier = 100;
 
-    // Start is called before the first frame update
-    void Awake()
+	// Start is called before the first frame update
+	void Awake()
     {
 		// Declare as mesh and instantiate Mesh Filter
 		mesh = new Mesh();
@@ -41,6 +38,10 @@ public class MeshGenerator : MonoBehaviour
 
 		// Create Vector equaling size of Mesh
 		vertices = new Vector3[(xSize + 1) * (zSize + 1)];
+
+		float noiseY = Random.Range(0.5f, 1.5f);
+		float noiseX = Random.Range(0.3f, 1.0f);
+		float noiseZ = Random.Range(0.3f, 1.0f);
 
 		// Loop through and instantiate all vertices
 		for (int i = 0, z = -zSize/2; z <= zSize/2; z++) {
