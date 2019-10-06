@@ -54,11 +54,12 @@ public class MeadowSpawn : MonoBehaviour
 			// Create the Position, Rotation and Scale of new object 
 			Vector3 newPos = new Vector3((transform.position.x + inCircle[0] * randXMult), 100, (transform.position.z + inCircle[1] * randZMult));
 			Quaternion randRotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-			if (Mixed[mixedImg].tag == "Grave") {
-				Vector3 randScale = new Vector3(1, 1, 1);
+			Vector3 randScale;
+			if (Meadow[meadowImg].tag == "Grave") {
+				randScale = new Vector3(1, 1, 1);
 			}
 			else {
-				Vector3 randScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+				randScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
 			}
 
 			// Find Ground - if Ground exists instantiate on ground
