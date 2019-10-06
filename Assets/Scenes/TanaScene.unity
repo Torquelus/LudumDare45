@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
@@ -190,8 +190,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_BindingMode: 3
   m_FollowOffset: {x: 0, y: 4.5, z: -1.75}
   m_XDamping: 1
@@ -216,8 +216,8 @@ MonoBehaviour:
     Value: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
-    m_InputAxisName: 
+    m_DecelTime: 0.01
+    m_InputAxisName:
     m_InputAxisValue: 0
     m_InvertInput: 0
     m_MinValue: -180
@@ -243,8 +243,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &277289303
 GameObject:
   m_ObjectHideFlags: 3
@@ -288,8 +288,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
@@ -315,8 +315,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_BindingMode: 3
   m_FollowOffset: {x: 0, y: 4.5, z: -1.75}
   m_XDamping: 1
@@ -341,8 +341,8 @@ MonoBehaviour:
     Value: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
-    m_InputAxisName: 
+    m_DecelTime: 0.01
+    m_InputAxisName:
     m_InputAxisValue: 0
     m_InvertInput: 0
     m_MinValue: -180
@@ -368,8 +368,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &308186918
 GameObject:
   m_ObjectHideFlags: 3
@@ -397,8 +397,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_ExcludedPropertiesInInspector:
   - m_Script
   - Header
@@ -438,7 +438,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308186918}
-  m_LocalRotation: {x: 0.000000008475439, y: 2.5516088e-15, z: -1, w: -0.00000021099471}
+  m_LocalRotation: {x: 0.000000008487774, y: 2.555224e-15, z: -1, w: -0.0000002109627}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -503,9 +503,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 179842842fb63e545bf50b75c8525436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
+  m_Name:
+  m_EditorClassIdentifier:
+  speed: 100
 --- !u!4 &544887089
 Transform:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544887087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -609,8 +609,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c67d5f504b0e6346842307307818f75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   xSize: 10
   zSize: 10
   noiseY: 1
@@ -658,8 +658,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_ExcludedPropertiesInInspector:
   - m_Script
   - Header
@@ -699,7 +699,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898460997}
-  m_LocalRotation: {x: 0.036325037, y: -0.000000010248911, z: 0.000000001414959, w: -0.99934006}
+  m_LocalRotation: {x: 0.036325037, y: 0.0000000089879455, z: -0.000000043182787,
+    w: -0.99934006}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -750,8 +751,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
@@ -777,8 +778,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_BindingMode: 3
   m_FollowOffset: {x: 0, y: 4.5, z: -1.75}
   m_XDamping: 1
@@ -803,8 +804,8 @@ MonoBehaviour:
     Value: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
-    m_InputAxisName: 
+    m_DecelTime: 0.01
+    m_InputAxisName:
     m_InputAxisValue: 0
     m_InvertInput: 0
     m_MinValue: -180
@@ -830,8 +831,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &930340540
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,8 +860,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 229ac6f5c23bfb84b8f7fdb610ee329d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Biomes:
   - {fileID: 2743665392219037290, guid: dd3d493c82bcea643adc760bdba8a2a3, type: 3}
   - {fileID: 8261013793410211737, guid: ef16c09e54cfab64084140cf7b7473c6, type: 3}
@@ -970,8 +971,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121182378}
-  m_LocalRotation: {x: 0.5646033, y: -0.00000001357354, z: 0.000000009285213, w: 0.82536244}
-  m_LocalPosition: {x: 0, y: 4.5, z: -1.75}
+  m_LocalRotation: {x: 0.5646033, y: -0.000000013577124, z: 0.000000009287665, w: 0.82536244}
+  m_LocalPosition: {x: 0, y: 54.5, z: -1.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 308186920}
@@ -990,8 +991,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ad8160c2db9d7748b018e5c0084f5d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &1121182383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,25 +1003,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f44b8ba67279b65499560a3c24467f9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   originalOrbits:
-  - m_Height: 6
-    m_Radius: 2
-  - m_Height: 2.5
-    m_Radius: 30
-  - m_Height: 0.4
-    m_Radius: 30
-  minScale: 0.2
+  - m_Height: 80
+    m_Radius: 40
+  - m_Height: 30
+    m_Radius: 100
+  - m_Height: 10
+    m_Radius: 100
+  minScale: 0.02
   maxScale: 5
   zAxis:
     Value: 1
     m_MaxSpeed: 30
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
+    m_DecelTime: 0.01
     m_InputAxisName: Mouse ScrollWheel
     m_InputAxisValue: 0
-    m_InvertInput: 0
+    m_InvertInput: 1
     m_MinValue: 0
     m_MaxValue: 1
     m_Wrap: 0
@@ -1040,8 +1041,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_ShowDebugText: 0
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
@@ -1077,11 +1078,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_ExcludedPropertiesInInspector:
   - m_Script
-  m_LockStageInInspector: 
+  m_LockStageInInspector:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
@@ -1106,10 +1107,10 @@ MonoBehaviour:
   m_LegacyBlendHint: 0
   m_YAxis:
     Value: 1
-    m_MaxSpeed: 0.5
+    m_MaxSpeed: 2
     m_AccelTime: 0.007
-    m_DecelTime: 0.1
-    m_InputAxisName: 
+    m_DecelTime: 0.01
+    m_InputAxisName:
     m_InputAxisValue: 0
     m_InvertInput: 0
     m_MinValue: 0
@@ -1131,8 +1132,8 @@ MonoBehaviour:
     Value: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
-    m_InputAxisName: 
+    m_DecelTime: 0.01
+    m_InputAxisName:
     m_InputAxisValue: 0
     m_InvertInput: 0
     m_MinValue: -180
@@ -1225,8 +1226,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_ExcludedPropertiesInInspector:
   - m_Script
   - Header
@@ -1266,7 +1267,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827529088}
-  m_LocalRotation: {x: -0.0000000211974, y: -0.018189551, z: 0.9998346, w: -0.00000014784017}
+  m_LocalRotation: {x: -0.000000021212513, y: -0.018189551, z: 0.9998346, w: -0.0000001478807}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
