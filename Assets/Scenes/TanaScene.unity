@@ -214,7 +214,7 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 200
+    m_MaxSpeed: 300
     m_AccelTime: 0.1
     m_DecelTime: 0.01
     m_InputAxisName: 
@@ -339,7 +339,7 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 200
+    m_MaxSpeed: 300
     m_AccelTime: 0.1
     m_DecelTime: 0.01
     m_InputAxisName: 
@@ -438,7 +438,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308186918}
-  m_LocalRotation: {x: 0.000000008487909, y: 2.5552263e-15, z: -1, w: -0.00000021095859}
+  m_LocalRotation: {x: 0.000000008487774, y: 2.555224e-15, z: -1, w: -0.0000002109627}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -699,7 +699,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898460997}
-  m_LocalRotation: {x: 0.036325037, y: -0.0000000037497223, z: -0.000000013651927,
+  m_LocalRotation: {x: 0.036325037, y: 0.0000000089879455, z: -0.000000043182787,
     w: -0.99934006}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -802,7 +802,7 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 200
+    m_MaxSpeed: 300
     m_AccelTime: 0.1
     m_DecelTime: 0.01
     m_InputAxisName: 
@@ -971,7 +971,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121182378}
-  m_LocalRotation: {x: 0.5646033, y: -0.000000013577133, z: 0.000000009287671, w: 0.82536244}
+  m_LocalRotation: {x: 0.5646033, y: -0.000000013577124, z: 0.000000009287665, w: 0.82536244}
   m_LocalPosition: {x: 0, y: 54.5, z: -1.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1021,7 +1021,7 @@ MonoBehaviour:
     m_DecelTime: 0.01
     m_InputAxisName: Mouse ScrollWheel
     m_InputAxisValue: 0
-    m_InvertInput: 0
+    m_InvertInput: 1
     m_MinValue: 0
     m_MaxValue: 1
     m_Wrap: 0
@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_LegacyBlendHint: 0
   m_YAxis:
     Value: 1
-    m_MaxSpeed: 0.5
+    m_MaxSpeed: 2
     m_AccelTime: 0.007
     m_DecelTime: 0.01
     m_InputAxisName: 
@@ -1130,7 +1130,7 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 200
+    m_MaxSpeed: 300
     m_AccelTime: 0.1
     m_DecelTime: 0.01
     m_InputAxisName: 
@@ -1267,7 +1267,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827529088}
-  m_LocalRotation: {x: -0.000000021212612, y: -0.018189551, z: 0.9998346, w: -0.00000014788064}
+  m_LocalRotation: {x: -0.000000021212513, y: -0.018189551, z: 0.9998346, w: -0.0000001478807}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

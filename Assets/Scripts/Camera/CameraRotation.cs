@@ -7,10 +7,13 @@ using UnityEngine;
 
 public class CameraRotation : MonoBehaviour
 {
+    private float Xrotation, Yrotation; //stores the rotation last left at
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Xrotation = 0;
+        Yrotation = 0;
     }
 
     // Update is called once per frame
@@ -23,12 +26,18 @@ public class CameraRotation : MonoBehaviour
             var freeLook = GetComponent<CinemachineFreeLook>();
             freeLook.m_XAxis.m_InputAxisName = "Mouse X";
             freeLook.m_YAxis.m_InputAxisName = "Mouse Y";
+            Xrotation = freeLook.m_XAxis.Value;
+            Yrotation = freeLook.m_YAxis.Value;
         }
         else
         {
             var freeLook = GetComponent<CinemachineFreeLook>();
-            freeLook.m_XAxis.m_InputAxisName = "";
+            freeLook.m_XAxis.m_InputAxisName = "";  
             freeLook.m_YAxis.m_InputAxisName = "";
+
+            freeLook.m_XAxis.Value = Xrotation;
+            freeLook.m_YAxis.Value = Yrotation;
+
         }
     }    
 }
