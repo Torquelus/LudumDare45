@@ -2,19 +2,43 @@
 	"RecipeList": 
 	[
 		{
-			"recipeName": "hello",
-			"amtWood": 1,
-			"amtStone": 1,
-			"amtTwig": 1,
-			"amtHay": 1,
-			"amtGrass": 1
+			"recipeName": "Twig House",
+			"amtWood": 0,
+			"amtStone": 0,
+			"amtTwig": 5,
+			"amtHay": 0,
+			"amtGrass": 0
 		},
 		{
-			"recipeName": "no",
-			"amtWood": 9,
-			"amtStone": 8,
-			"amtTwig": 6,
-			"amtHay": 7,
+			"recipeName": "Wood House",
+			"amtWood": 5,
+			"amtStone": 0,
+			"amtTwig": 0,
+			"amtHay": 0,
 			"amtGrass": 0
+		},
+		{
+			"recipeName": "Stone House",
+			"amtWood": 0,
+			"amtStone": 5,
+			"amtTwig": 0,
+			"amtHay": 0,
+			"amtGrass": 0
+		},
+		{
+			"recipeName": "Campfire",
+			"amtWood": 0,
+			"amtStone": 0,
+			"amtTwig": 3,
+			"amtHay": 0,
+			"amtGrass": 2
+		},
+		{
+			"recipeName": "Campfire",
+			"amtWood": 0,
+			"amtStone": 0,
+			"amtTwig": 3,
+			"amtHay": 0,
+			"amtGrass": 2
 		}
 	]}
