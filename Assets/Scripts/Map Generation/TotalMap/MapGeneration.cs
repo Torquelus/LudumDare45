@@ -6,15 +6,17 @@ public class MapGeneration : MonoBehaviour {
 	public GameObject[] Biomes;
 
 	[Header("Number of Biomes")]
-	public int[] biomeRange;
+	public int minBiomeRange = 50;
+    public int maxBiomeRange = 70;
 
-	[Header("Spawn Area (Width, Length)")]
-	public int[] spawnArea;
-	
-	private void Start() {
+    [Header("Spawn Area (Width, Length)")]
+	public int spawnAreaWidth = 500;
+    public int spawnAreaLength = 500;
+
+    private void Start() {
 
 		// Choose Number of Biomes
-		int randBiome = Random.Range(biomeRange[0], biomeRange[1]);
+		int randBiome = Random.Range(minBiomeRange, maxBiomeRange);
 
 		// Draw Biomes
 		for (int i = 0; i <= randBiome; i++) {
@@ -23,8 +25,8 @@ public class MapGeneration : MonoBehaviour {
 			int biomeImg = Random.Range(0, Biomes.Length);
 
 			// Randomly Choose Point in spawn area
-			int randX = Random.Range(-spawnArea[0], spawnArea[0]);
-			int randZ = Random.Range(-spawnArea[1], spawnArea[1]);
+			int randX = Random.Range(-spawnAreaWidth, spawnAreaWidth);
+			int randZ = Random.Range(-spawnAreaLength, spawnAreaLength);
 
 			// Create the Position of new object 
 			Vector3 newPos = new Vector3(randX, 100, randZ);
@@ -33,6 +35,7 @@ public class MapGeneration : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.Raycast(newPos, Vector3.down, out hit)) {
 				Vector3 finalPos = hit.point;
+                Debug.Log(biomeImg);
 				Instantiate(Biomes[biomeImg], finalPos, Quaternion.identity);
 			}
 		}

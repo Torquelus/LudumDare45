@@ -6,23 +6,27 @@ public class MixedSpawn : MonoBehaviour
 	public GameObject[] Mixed;
 
 	[Header("Number of Biome Objects")]
-	public int[] mixedRange;
+    public int minObjects = 100;
+    public int maxObjects = 200;
 
-	[Header("Biome Range X(min, max) Z(min, max)")]
-	public int[] biomeRange;
+    [Header("Biome Range X(min, max) Z(min, max)")]
+    public int minBiomeRangeX = 10;
+    public int maxBiomeRangeX = 20;
+    public int minBiomeRangeZ = 10;
+    public int maxBiomeRangeZ = 20;
 
-	[Header("Max Object Scale")]
+    [Header("Max Object Scale")]
 	public int maxScale;
 
 	// Start is called before the first frame update
 	void Start() {
 
 		// Number of objects in mixed Biome
-		int randMixed = Random.Range(mixedRange[0], mixedRange[1]);
+		int randMixed = Random.Range(minObjects, maxObjects);
 
 		// Random size of Biome from spawn point
-		int randWid = Random.Range(biomeRange[0], biomeRange[1]);
-		int randLen = Random.Range(biomeRange[2], biomeRange[3]);
+		int randWid = Random.Range(minBiomeRangeX, maxBiomeRangeX);
+		int randLen = Random.Range(minBiomeRangeZ, maxBiomeRangeZ);
 
 		// Draw All Images
 		for (int i = 0; i <= randMixed; i++) {

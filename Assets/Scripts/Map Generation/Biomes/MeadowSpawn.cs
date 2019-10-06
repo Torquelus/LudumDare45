@@ -6,23 +6,27 @@ public class MeadowSpawn : MonoBehaviour
 	public GameObject[] Meadow;
 
 	[Header("Number of Biome Objects")]
-	public int[] meadowRange;
+    public int minObjects = 100;
+    public int maxObjects = 200;
 
-	[Header("Biome Range X(min, max) Z(min, max)")]
-	public int[] biomeRange;
+    [Header("Biome Range X(min, max) Z(min, max)")]
+    public int minBiomeRangeX = 10;
+    public int maxBiomeRangeX = 20;
+    public int minBiomeRangeZ = 10;
+    public int maxBiomeRangeZ = 20;
 
-	[Header("Max Object Scale")]
+    [Header("Max Object Scale")]
 	public int maxScale;
 
 	// Start is called before the first frame update
 	void Start() {
 
 		// Number of objects in meadow
-		int randMeadow = Random.Range(meadowRange[0], meadowRange[1]);
+		int randMeadow = Random.Range(minObjects, maxObjects);
 
 		// Random size of Biome from spawn point
-		int randWid = Random.Range(biomeRange[0], biomeRange[1]);
-		int randLen = Random.Range(biomeRange[2], biomeRange[3]);
+		int randWid = Random.Range(minBiomeRangeX, maxBiomeRangeX);
+		int randLen = Random.Range(minBiomeRangeZ, maxBiomeRangeZ);
 
 		// Draw All Images
 		for (int i = 0; i <= randMeadow; i++) {
