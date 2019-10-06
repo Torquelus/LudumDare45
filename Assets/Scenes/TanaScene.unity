@@ -214,9 +214,9 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 200
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
+    m_DecelTime: 0.01
     m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 0
@@ -339,9 +339,9 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 200
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
+    m_DecelTime: 0.01
     m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 0
@@ -438,7 +438,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308186918}
-  m_LocalRotation: {x: 0.000000009431389, y: 2.7319438e-15, z: -1, w: -0.00000020852633}
+  m_LocalRotation: {x: 0.000000008487909, y: 2.5552263e-15, z: -1, w: -0.00000021095859}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179842842fb63e545bf50b75c8525436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 100
 --- !u!4 &544887089
 Transform:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544887087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -699,7 +699,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898460997}
-  m_LocalRotation: {x: 0.036325037, y: 0.000000008988488, z: -0.000000043183885, w: -0.99934006}
+  m_LocalRotation: {x: 0.036325037, y: -0.0000000037497223, z: -0.000000013651927,
+    w: -0.99934006}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -801,9 +802,9 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 200
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
+    m_DecelTime: 0.01
     m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 0
@@ -970,8 +971,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121182378}
-  m_LocalRotation: {x: 0.5646033, y: -0.000000014101955, z: 0.000000009646684, w: 0.82536244}
-  m_LocalPosition: {x: 0, y: 4.5, z: -1.75}
+  m_LocalRotation: {x: 0.5646033, y: -0.000000013577133, z: 0.000000009287671, w: 0.82536244}
+  m_LocalPosition: {x: 0, y: 54.5, z: -1.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 308186920}
@@ -1005,19 +1006,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalOrbits:
-  - m_Height: 6
-    m_Radius: 2
-  - m_Height: 2.5
-    m_Radius: 30
-  - m_Height: 0.4
-    m_Radius: 30
-  minScale: 0.2
+  - m_Height: 80
+    m_Radius: 40
+  - m_Height: 30
+    m_Radius: 100
+  - m_Height: 10
+    m_Radius: 100
+  minScale: 0.02
   maxScale: 5
   zAxis:
     Value: 1
     m_MaxSpeed: 30
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
+    m_DecelTime: 0.01
     m_InputAxisName: Mouse ScrollWheel
     m_InputAxisValue: 0
     m_InvertInput: 0
@@ -1108,7 +1109,7 @@ MonoBehaviour:
     Value: 1
     m_MaxSpeed: 0.5
     m_AccelTime: 0.007
-    m_DecelTime: 0.1
+    m_DecelTime: 0.01
     m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 0
@@ -1129,9 +1130,9 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 200
     m_AccelTime: 0.1
-    m_DecelTime: 0.1
+    m_DecelTime: 0.01
     m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 0
@@ -1266,7 +1267,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827529088}
-  m_LocalRotation: {x: -0.0000000225695, y: -0.018189551, z: 0.9998346, w: -0.00000015156576}
+  m_LocalRotation: {x: -0.000000021212612, y: -0.018189551, z: 0.9998346, w: -0.00000014788064}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
