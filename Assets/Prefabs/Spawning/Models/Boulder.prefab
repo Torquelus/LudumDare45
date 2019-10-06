@@ -66,6 +66,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3103168944499360184}
+  - component: {fileID: 3814254853742142345}
+  - component: {fileID: 1494258969734458301}
   m_Layer: 0
   m_Name: Boulder
   m_TagString: Untagged
@@ -89,6 +91,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &3814254853742142345
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966226093718676678}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.22, y: 0.5, z: 0.22}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0.1, y: 0, z: 0.02}
+  m_TimeToStationary: 0.5
+--- !u!114 &1494258969734458301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966226093718676678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &6464353791681480250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,6 +130,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3103168944499360184}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: eb08e4cc705dc4949a925657fa36b167,
+        type: 3}
+      propertyPath: m_Name
+      value: Stone3
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: eb08e4cc705dc4949a925657fa36b167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -165,11 +204,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: eb08e4cc705dc4949a925657fa36b167,
-        type: 3}
-      propertyPath: m_Name
-      value: Stone3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb08e4cc705dc4949a925657fa36b167, type: 3}
