@@ -17,7 +17,7 @@ public class BoulderSpawn : MonoBehaviour
 	// Start is called before the first frame update
 	void Start() {
 
-		// Number of Trees and Twigs in forest
+		// Number of Boulders and Stones in forest
 		int randBould = Random.Range(bouldRange[0], bouldRange[1]);
 
 		// Random size of Biome from spawn point
