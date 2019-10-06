@@ -18,10 +18,11 @@ public class MeshGenerator : MonoBehaviour
 	public int multiplier = 100;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
 		mesh = new Mesh();
 		GetComponent<MeshFilter>().mesh = mesh;
+		GetComponent<MeshCollider>().sharedMesh = mesh;
 		CreateShape();
 		UpdateMesh();
     }

@@ -10,8 +10,15 @@ public class BoulderSpawn : MonoBehaviour
 			int bouldImg = Random.Range(0, Boulders.Length);
 			int randX = Random.Range(-11, 11);
 			int randZ = Random.Range(-11, 11);
-			Vector3 newPos = new Vector3(transform.position.x + (randX * 10), transform.position.y, transform.position.z + (randZ * 10));
-			Instantiate(Boulders[bouldImg], newPos, Quaternion.identity);
+			
+			Vector3 newPos = new Vector3(transform.position.x + (randX * 10), 100, transform.position.z + (randZ * 10));
+
+			RaycastHit hit;
+			if (Physics.Raycast(transform.position, Vector3.down, out hit)){
+				Vector3 finalPos = hit.point;
+				Instantiate(Boulders[bouldImg], finalPos, Quaternion.identity);
+			}
+
 		}
 	}
 }
