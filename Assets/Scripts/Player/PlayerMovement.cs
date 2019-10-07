@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Camera cam = Camera.main;
+    Camera cam;
     private NavMeshAgent agent;
     private bool selected = false;
     //public Material selectedcolor;
@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         agent = this.gameObject.GetComponent<NavMeshAgent>();
+        cam = Camera.main;
     }
 
     
